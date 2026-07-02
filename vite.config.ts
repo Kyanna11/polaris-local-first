@@ -28,7 +28,7 @@ function resolveManualChunk(id: string) {
 }
 
 export default defineConfig(({ mode }) => {
-  // 留空，让应用完全使用界面里的配置（中转站地址 + API Key）
+  // 核心改动：强制设为空字符串，让所有API请求都由应用界面里的配置决定
   const apiOrigin = '';
 
   return {
