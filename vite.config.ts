@@ -28,8 +28,8 @@ function resolveManualChunk(id: string) {
 }
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
-  const apiOrigin = env.VITE_POLARIS_API_ORIGIN?.trim();
+  // 留空，让应用完全使用界面里的配置（中转站地址 + API Key）
+  const apiOrigin = '';
 
   return {
     plugins: [react()],
